@@ -1,0 +1,44 @@
+{
+  "cars": [
+    {
+      "id": 1,
+      "make": "Ford",
+      "model": "Mustang",
+      "year": 2020,
+      "color": "Black",
+      "price": 25000
+    },
+    {
+      "id": 2,
+      "make": "Datsun",
+      "model": "240z",
+      "year": 1969,
+      "color": "Red",
+      "price": 21000
+    },
+    {
+      "id": 3,
+      "make": "Tesla",
+      "model": "S",
+      "year": 2015,
+      "color": "White",
+      "price": 80000
+    },
+    {
+      "id": 4,
+      "make": "Porsche",
+      "model": "Cayman",
+      "year": 2012,
+      "color": "Orange",
+      "price": 23000
+    },
+    {
+      "id": 5,
+      "make": "Mercedes",
+      "model": "S300",
+      "year": 2020,
+      "color": "Silver",
+      "price": 47000
+    }
+  ]
+}

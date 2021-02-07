@@ -1,0 +1,98 @@
+<h1>Cars</h1>
+
+
+<form
+  [formGroup]="carForm">
+  <div class="inputs">
+    <div>
+      <label for="make-input">Make:</label>
+      <input
+        formControlName="make"
+        type="text"
+        id="make-input">
+    </div>
+    <div>
+      <label for="model-input">Model:</label>
+      <input
+        formControlName="model"
+        type="text"
+        id="model-input">
+    </div>
+    <div>
+      <label for="year-input">Year:</label>
+      <input
+        formControlName="year"
+        type="number"
+        id="year-input">
+    </div>
+    <div>
+      <label for="color-input">Color:</label>
+      <input
+        formControlName="color"
+        type="text"
+        id="color-input">
+    </div>
+    <div>
+      <label for="price-input">Price:</label>
+      <input
+        formControlName="price"
+        type="number"
+        min="0"
+        step="1000"
+        id="price-input">
+    </div>
+  </div>
+  <button
+    (click)="doSubmitForm()"
+    class="success" >
+      {{formBtn}}
+  </button>
+  <button
+    (click)="resetForm()" >
+      Cancel
+  </button>
+</form>
+
+
+
+<table>
+
+  <thead>
+
+    <tr>
+      <th>Id</th>
+      <th>Make</th>
+      <th>Model</th>
+      <th>Year</th>
+      <th>Color</th>
+      <th>Price</th>
+      <th>Actions</th>
+    </tr>
+
+  </thead>
+
+  <tbody>
+    
+    <tr *ngFor="let car of cars">
+      <td>{{ car.id }}</td>
+      <td>{{ car.make }}</td>
+      <td>{{ car.model }}</td>
+      <td>{{ car.year }}</td>
+      <td>{{ car.color }}</td>
+      <td>{{ car.price | currency:'USD':'$' }}</td>
+      <td>
+        <button
+          (click)="doEdit(car)"
+          class="info" >
+            Edit
+        </button>
+        <button
+          (click)="doDelete(car)"
+          class="danger" >
+            Delete
+        </button>
+      </td>
+    </tr>
+
+  </tbody>
+</table>
